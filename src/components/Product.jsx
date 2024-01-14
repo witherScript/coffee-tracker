@@ -10,6 +10,7 @@ function Product(props) {
           <p>{props.price}</p>
           <p>{props.origin}</p>
           <p>{props.roast}</p>
+          <p>{props.quantity}</p>
           <PurchaseForm id={props.id} />
         </div>
       </div>

@@ -11,6 +11,7 @@ function BurlapDetail(props) {
       <h3>{product.price}</h3>
       <p><em>Origin: {product.origin}</em></p>
       <p><em>Roast: {product.roast}</em></p>
+      <p><em>Roast: {product.quantity}</em></p>
       <br />
       <button onClick={() => onClickingEdit(product.id)}>Edit Product</button>
       <br />

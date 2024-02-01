@@ -11,6 +11,8 @@ Coffee Tracker is a React application for tracking coffee products. It allows us
 - ESLint
 - npm
 
+## Component Diagram
+<img src='./Component-Diagram.png'>
 
 ## Setup/Installation Instructions:
 1. Clone the repository to your local machine.

@@ -4,14 +4,16 @@ import PurchaseForm from './PurchaseForm';
 function Product(props) {
   return (
     <React.Fragment>
-      <div className='card-container' onClick={()=> props.whenProductClicked(props.id)}>
+      <div className='card-container'>
         <div className='product-card'>
-          <h3>{props.name}</h3>
-          <p>{props.price}</p>
-          <p>{props.origin}</p>
-          <p>{props.roast}</p>
-          <p>{props.quantity}</p>
-          <PurchaseForm id={props.id} />
+          <div className="click-box" onClick={()=> props.whenProductClicked(props.id)}>
+            <h3>{props.name}</h3>
+            <p>{props.price}</p>
+            <p>{props.origin}</p>
+            <p>{props.roast}</p>
+            <p>{props.quantity}</p>
+          </div>
+          <PurchaseForm id={props.id} onPurchase={props.onPurchase} />
         </div>
       </div>
     </React.Fragment>

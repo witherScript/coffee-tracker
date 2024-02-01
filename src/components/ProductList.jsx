@@ -24,8 +24,7 @@ function ProductList(props) {
 }
 
 ProductList.propTypes = {
-  productList: PropTypes.array,
-  onPurchase: PropTypes.func
+  productList: PropTypes.array
 }
 
 

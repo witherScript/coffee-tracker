@@ -38,6 +38,14 @@ function ReuseableForm(props) {
           placeholder="Roast"
           required />
         <br />
+        <label htmlFor="quantity">Quantity:</label>
+        <input
+          type="number"
+          id="quantity"
+          name="quantity"
+          placeholder="Quantity"
+          required />
+        <br />
         <button type="submit">{props.buttonText}</button>
       </form>
     </>

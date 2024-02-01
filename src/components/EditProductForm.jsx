@@ -12,7 +12,7 @@ function EditProductForm(props) {
       origin: event.target.origin.value,
       roast: event.target.roast.value,
       price: parseFloat(event.target.price.value),
-      quantity: parseInt(event.target.quantity.value),
+      quantity: product.quantity,
       id: product.id
     })
   }
@@ -26,7 +26,7 @@ function EditProductForm(props) {
 }
 
 EditProductForm.propTypes = {
-  Product: PropTypes.object,
+  product: PropTypes.object,
   onEditProduct: PropTypes.func
 }
 

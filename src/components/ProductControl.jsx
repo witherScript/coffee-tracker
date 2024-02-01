@@ -12,6 +12,7 @@ class ProductControl extends React.Component {
       formVisible: false,
       mainProductList: [],
       selectedProduct: null,
+      editing: false
     };
   }
 
@@ -47,7 +48,7 @@ class ProductControl extends React.Component {
     this.setState({ editing: true });
   };
 
-  handleEditingTicket = (editedProduct) => {
+  handleEditingProduct = (editedProduct) => {
     const editedMainProductList = this.state.mainProductList
       .filter((prod) => prod.id !== this.state.selectedProduct.id)
       .concat(editedProduct);
@@ -58,12 +59,12 @@ class ProductControl extends React.Component {
     });
   };
 
-  handleSellingingProduct = (id) => {
+  handleSellingProduct = (id) => {
     const toSell = this.state.mainProductList.filter((prod) => prod.id === id)[0];
     let updatedQuant;
     toSell.purchased = true;
     if (toSell.quantity > 1) {
-      updatedQuant = toSell.quantity - 1;
+      updatedQuant = toSell.quantity - 10;
     } else {
       updatedQuant = "Out of Stock";
     }
